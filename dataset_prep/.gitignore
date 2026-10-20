@@ -1,0 +1,5 @@
+/data/
+/data_rebuilt/
+/sources/
+__pycache__/
+*.pyc
