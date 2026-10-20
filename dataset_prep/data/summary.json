@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "MedQuAD": {
+      "url": "https://github.com/abachaa/MedQuAD",
+      "commit": "577bd37b96c02d1833b2c9eed2de9f96964e96cb",
+      "file_count": 11274,
+      "content_sha256": "03b36f3d18ae4667de9d44b3a27380e333aeec16eae465fe9fb9cb1323cb5580",
+      "files_without_records": [
+        "5_NIDDK_QA/0000056.xml",
+        "5_NIDDK_QA/0000064.xml",
+        "5_NIDDK_QA/0000065.xml",
+        "5_NIDDK_QA/0000077.xml",
+        "5_NIDDK_QA/0000175.xml",
+        "5_NIDDK_QA/0000177.xml"
+      ]
+    },
+    "AMQA": {
+      "url": "https://github.com/XY-Showing/AMQA",
+      "commit": "335b1752ba4912d00050fa6531ba8d2c2aef6fb9",
+      "file_count": 1,
+      "content_sha256": "d6d3220cb87474a9fd84b2de21485cfd9c747ba044f75ece563216d3f91b1dca",
+      "files_without_records": []
+    }
+  },
+  "datasets": {
+    "MedQuAD": {
+      "read": 47457,
+      "source_schemas": {
+        "DiseaseFile": 5,
+        "Document": 47436,
+        "doc": 16
+      },
+      "candidate": 16375,
+      "missing_question": 0,
+      "missing_answer": 31034,
+      "duplicate_qa": 48,
+      "repeated_source_qids": 17371,
+      "review_flags": {
+        "clinical_or_time_sensitive": 4861,
+        "long_answer": 875,
+        "multiple_reference_answers": 2255,
+        "reference_only": 4,
+        "support_resource": 1,
+        "uncertainty_or_context": 2432
+      }
+    },
+    "AMQA": {
+      "read": 801,
+      "source_schemas": {
+        "AMQA": 801
+      },
+      "candidate": 801,
+      "missing_question": 0,
+      "missing_answer": 0,
+      "duplicate_qa": 0,
+      "repeated_source_qids": 0,
+      "review_flags": {}
+    }
+  },
+  "amqa_variants": 4806,
+  "checks": {
+    "record_ids": "passed",
+    "answer_keys": "passed",
+    "duplicate_links": "passed",
+    "text_hashes": "passed",
+    "variant_links": "passed",
+    "source_versions": "passed"
+  },
+  "files_sha256": {
+    "amqa.jsonl": "3714246ad32896d1e7c0d1217e840617d6808f507d4aed90f51c339a92c9da04",
+    "amqa_variants.jsonl": "bdad6fbfccb3c9386d273503c2e416801c028755f0c76d46c013c91a08bb5bff",
+    "excluded.jsonl": "fb77865592f837018d23843ed2e4f6b8d68a403732380297eb919578f8b25307",
+    "medquad.jsonl": "3a75a642b997ba3998c7ea1f7caeaece1dc7a4e7ed27e95a961dc3cd0daeac7d"
+  }
+}
