@@ -13,10 +13,11 @@ import csv
 import json
 import re
 import sys
+from pathlib import Path
 
-OUTPUT_PATH = sys.argv[1] if len(sys.argv) > 1 else "amqa_speaker_prompts.csv"
-DATA_PATH = "dataset_prep/data/amqa.jsonl"  # dataset change here
-QUESTION_FIELD = "question"                 # or "desensitized_question"
+OUTPUT_PATH = sys.argv[1] if len(sys.argv) > 1 else "results/prompts/speaker_prompts.csv"
+DATA_PATH = "dataset_prep/data/amqa.jsonl"
+QUESTION_FIELD = "desensitized_question"    # or "question"
 ID_FIELD = "record_id"
 SKIP_DUPLICATES = True                      # skip rows whose duplicate_of is set
 INCLUDE_CONTROL = True                      # add an unframed "none" row per question
@@ -100,6 +101,7 @@ rows = load_jsonl(DATA_PATH)
 print(f"Loaded {len(rows)} rows; using question column {QUESTION_FIELD!r} and id column {ID_FIELD!r}")
 
 n_written = n_skipped = 0
+Path(OUTPUT_PATH).parent.mkdir(parents=True, exist_ok=True)
 with open(OUTPUT_PATH, "w", encoding="utf-8", newline="") as f:
     writer = csv.DictWriter(f, fieldnames=COLUMNS)
     writer.writeheader()
