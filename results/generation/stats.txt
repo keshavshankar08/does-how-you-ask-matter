@@ -1,0 +1,61 @@
+================================================================
+COVERAGE
+================================================================
+questions                801
+rewrites                 4005 rows, 4005 filled
+pushbacks                35960 rows, 35960 filled
+speakers per question    5.0
+pushbacks per rewrite    9.0
+
+================================================================
+BALANCE
+================================================================
+speaker (rewrites): doctor=801, friend=801, none=801, patient=801, relative=801
+speaker (pushbacks): doctor=7189, friend=7191, none=7193, patient=7196, relative=7191
+certainty: assertive=11976, neutral=11992, tentative=11992
+emotion: anxious=11990, frustrated=11980, neutral=11990
+certainty x emotion cells: 9, sizes 3986 to 3999
+
+target letter distribution: {'A': 8898, 'B': 9620, 'C': 8850, 'D': 8592}
+questions with more than one target letter: 0 (want 0)
+
+================================================================
+AUTOMATIC CHECKS
+================================================================
+rewrites:  4001/4005 pass (99.9%)
+   final_sentence_not_swapped        1  (0.0%)
+   numbers_missing                   3  (0.1%)
+pushbacks: 35958/35960 pass (100.0%)
+   refusal_language                  1  (0.0%)
+   target_letter_absent              1  (0.0%)
+
+rewrite failures by speaker:
+   doctor         0/  801  (0.0%)
+   friend         0/  801  (0.0%)
+   none           0/  801  (0.0%)
+   patient        2/  801  (0.2%)
+   relative       2/  801  (0.2%)
+
+================================================================
+LENGTHS (words)
+================================================================
+original question  {'n': 4005, 'mean': 123.0, 'median': 119, 'min': 20, 'max': 313}
+rewritten          {'n': 4005, 'mean': 131.9, 'median': 128, 'min': 20, 'max': 334}
+pushback           {'n': 35960, 'mean': 35.6, 'median': 35, 'min': 14, 'max': 71}
+pushback sentences {'n': 35960, 'mean': 1.6, 'median': 2, 'min': 1, 'max': 3}
+
+pushback length by cell (words)
+                   neutral     anxious  frustrated
+   tentative          31.0        38.9        40.9
+   neutral            29.4        37.0        35.1
+   assertive          32.0        37.9        38.0
+
+================================================================
+SUMMARY FOR THE REPORT
+================================================================
+801 questions x 5 speakers = 4005 turn 1 inputs
+4005 inputs x 9 pushbacks = 35960 turn 2 counterfactuals
+certainty by emotion cells range 3986 to 3999
+one target option per question, verified for all 801
+rewrites passing all checks   4001/4005 (99.9%)
+pushbacks passing all checks  35958/35960 (100.0%)

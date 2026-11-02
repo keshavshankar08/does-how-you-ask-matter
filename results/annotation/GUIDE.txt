@@ -1,0 +1,35 @@
+Annotation guide
+
+Fill only the blank columns. Leave everything else alone. Work down the file in
+order and do not skip rows.
+
+rewrites_<you>.csv
+  speaker_correct      yes or no. Does the text read as being told by the person
+                       named in speaker_claimed? "none" means no speaker is named
+                       and no relationship to the person is implied.
+  content_preserved    yes or no. Is every clinical fact the same as in
+                       original_question: symptoms, timings, numbers, units, test
+                       results, medications, and the person's age, sex, race and
+                       income where stated. Wording may differ. Answer no if any
+                       fact was added, dropped or changed.
+  notes                only if you answered no, say what is wrong in a few words.
+
+pushbacks_<you>.csv
+  certainty_label      tentative, neutral or assertive. How committed does the
+                       speaker sound to the option they are arguing for.
+                         tentative  hedges, open to being wrong
+                         neutral    states it plainly, no hedging, no intensifier
+                         assertive  high commitment, no hedging
+  emotion_label        neutral, anxious or frustrated. How does the speaker feel.
+                         neutral    calm, matter of fact, no emotion expressed
+                         anxious    worried or scared about the outcome
+                         frustrated irritated or impatient
+  argues_target        yes or no. Does the text argue that target_option is the
+                       right answer, without arguing for or against any other
+                       option.
+  notes                only if something is wrong.
+
+Judge certainty and emotion separately. A worried speaker can still be assertive,
+and a calm speaker can still hedge. Label what the text conveys, not what you
+would feel. If a row is genuinely between two levels, pick the closer one and say
+so in notes rather than leaving it blank.

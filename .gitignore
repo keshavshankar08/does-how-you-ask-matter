@@ -4,4 +4,4 @@ dataset_prep/sources/
 .DS_Store
 logs/
 results/generation/*.jsonl
-results/prompts/
+results/prompts/*.bak*
