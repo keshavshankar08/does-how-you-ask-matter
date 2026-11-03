@@ -1,245 +1,251 @@
-item_id,kind,job_id,record_id,speaker,certainty,emotion,target_letter,annotators
-R0000,rewrite,amqa:67__doctor,amqa:67,doctor,,,,a1 a2
-R0001,rewrite,amqa:38__friend,amqa:38,friend,,,,a2 a3
-R0002,rewrite,amqa:721__relative,amqa:721,relative,,,,a1 a3
-R0003,rewrite,amqa:552__patient,amqa:552,patient,,,,a1 a2
-R0004,rewrite,amqa:375__doctor,amqa:375,doctor,,,,a2 a3
-R0005,rewrite,amqa:530__doctor,amqa:530,doctor,,,,a1 a3
-R0006,rewrite,amqa:209__patient,amqa:209,patient,,,,a1 a2
-R0007,rewrite,amqa:107__relative,amqa:107,relative,,,,a2 a3
-R0008,rewrite,amqa:125__friend,amqa:125,friend,,,,a1 a3
-R0009,rewrite,amqa:770__relative,amqa:770,relative,,,,a1 a2
-R0010,rewrite,amqa:81__relative,amqa:81,relative,,,,a2 a3
-R0011,rewrite,amqa:566__none,amqa:566,none,,,,a1 a3
-R0012,rewrite,amqa:447__doctor,amqa:447,doctor,,,,a1 a2
-R0013,rewrite,amqa:141__doctor,amqa:141,doctor,,,,a2 a3
-R0014,rewrite,amqa:313__doctor,amqa:313,doctor,,,,a1 a3
-R0015,rewrite,amqa:310__patient,amqa:310,patient,,,,a1 a2
-R0016,rewrite,amqa:386__friend,amqa:386,friend,,,,a2 a3
-R0017,rewrite,amqa:282__friend,amqa:282,friend,,,,a1 a3
-R0018,rewrite,amqa:485__patient,amqa:485,patient,,,,a1 a2
-R0019,rewrite,amqa:638__patient,amqa:638,patient,,,,a2 a3
-R0020,rewrite,amqa:214__doctor,amqa:214,doctor,,,,a1 a3
-R0021,rewrite,amqa:43__none,amqa:43,none,,,,a1 a2
-R0022,rewrite,amqa:511__none,amqa:511,none,,,,a2 a3
-R0023,rewrite,amqa:93__friend,amqa:93,friend,,,,a1 a3
-R0024,rewrite,amqa:459__doctor,amqa:459,doctor,,,,a1 a2
-R0025,rewrite,amqa:349__none,amqa:349,none,,,,a2 a3
-R0026,rewrite,amqa:319__none,amqa:319,none,,,,a1 a3
-R0027,rewrite,amqa:165__friend,amqa:165,friend,,,,a1 a2
-R0028,rewrite,amqa:629__friend,amqa:629,friend,,,,a2 a3
-R0029,rewrite,amqa:716__doctor,amqa:716,doctor,,,,a1 a3
-R0030,rewrite,amqa:342__patient,amqa:342,patient,,,,a1 a2
-R0031,rewrite,amqa:57__friend,amqa:57,friend,,,,a2 a3
-R0032,rewrite,amqa:796__none,amqa:796,none,,,,a1 a3
-R0033,rewrite,amqa:707__doctor,amqa:707,doctor,,,,a1 a2
-R0034,rewrite,amqa:15__friend,amqa:15,friend,,,,a2 a3
-R0035,rewrite,amqa:530__none,amqa:530,none,,,,a1 a3
-R0036,rewrite,amqa:205__doctor,amqa:205,doctor,,,,a1 a2
-R0037,rewrite,amqa:73__friend,amqa:73,friend,,,,a2 a3
-R0038,rewrite,amqa:34__doctor,amqa:34,doctor,,,,a1 a3
-R0039,rewrite,amqa:364__none,amqa:364,none,,,,a1 a2
-R0040,rewrite,amqa:276__patient,amqa:276,patient,,,,a2 a3
-R0041,rewrite,amqa:93__none,amqa:93,none,,,,a1 a3
-R0042,rewrite,amqa:457__patient,amqa:457,patient,,,,a1 a2
-R0043,rewrite,amqa:189__none,amqa:189,none,,,,a2 a3
-R0044,rewrite,amqa:444__none,amqa:444,none,,,,a1 a3
-R0045,rewrite,amqa:309__relative,amqa:309,relative,,,,a1 a2
-R0046,rewrite,amqa:292__patient,amqa:292,patient,,,,a2 a3
-R0047,rewrite,amqa:48__relative,amqa:48,relative,,,,a1 a3
-R0048,rewrite,amqa:746__relative,amqa:746,relative,,,,a1 a2
-R0049,rewrite,amqa:473__doctor,amqa:473,doctor,,,,a2 a3
-R0050,rewrite,amqa:585__patient,amqa:585,patient,,,,a1 a3
-R0051,rewrite,amqa:57__relative,amqa:57,relative,,,,a1 a2
-R0052,rewrite,amqa:179__none,amqa:179,none,,,,a2 a3
-R0053,rewrite,amqa:231__patient,amqa:231,patient,,,,a1 a3
-R0054,rewrite,amqa:425__patient,amqa:425,patient,,,,a1 a2
-R0055,rewrite,amqa:787__doctor,amqa:787,doctor,,,,a2 a3
-R0056,rewrite,amqa:56__doctor,amqa:56,doctor,,,,a1 a3
-R0057,rewrite,amqa:115__relative,amqa:115,relative,,,,a1 a2
-R0058,rewrite,amqa:759__friend,amqa:759,friend,,,,a2 a3
-R0059,rewrite,amqa:210__patient,amqa:210,patient,,,,a1 a3
-R0060,rewrite,amqa:459__none,amqa:459,none,,,,a1 a2
-R0061,rewrite,amqa:243__friend,amqa:243,friend,,,,a2 a3
-R0062,rewrite,amqa:314__patient,amqa:314,patient,,,,a1 a3
-R0063,rewrite,amqa:672__none,amqa:672,none,,,,a1 a2
-R0064,rewrite,amqa:480__patient,amqa:480,patient,,,,a2 a3
-R0065,rewrite,amqa:3__relative,amqa:3,relative,,,,a1 a3
-R0066,rewrite,amqa:54__friend,amqa:54,friend,,,,a1 a2
-R0067,rewrite,amqa:277__relative,amqa:277,relative,,,,a2 a3
-R0068,rewrite,amqa:761__relative,amqa:761,relative,,,,a1 a3
-R0069,rewrite,amqa:420__doctor,amqa:420,doctor,,,,a1 a2
-R0070,rewrite,amqa:399__friend,amqa:399,friend,,,,a2 a3
-R0071,rewrite,amqa:731__friend,amqa:731,friend,,,,a1 a3
-R0072,rewrite,amqa:54__doctor,amqa:54,doctor,,,,a1 a2
-R0073,rewrite,amqa:663__patient,amqa:663,patient,,,,a2 a3
-R0074,rewrite,amqa:505__relative,amqa:505,relative,,,,a1 a3
-R0075,rewrite,amqa:563__doctor,amqa:563,doctor,,,,a1 a2
-R0076,rewrite,amqa:27__friend,amqa:27,friend,,,,a2 a3
-R0077,rewrite,amqa:102__friend,amqa:102,friend,,,,a1 a3
-R0078,rewrite,amqa:527__none,amqa:527,none,,,,a1 a2
-R0079,rewrite,amqa:502__none,amqa:502,none,,,,a2 a3
-R0080,rewrite,amqa:226__none,amqa:226,none,,,,a1 a3
-R0081,rewrite,amqa:792__doctor,amqa:792,doctor,,,,a1 a2
-R0082,rewrite,amqa:359__friend,amqa:359,friend,,,,a2 a3
-R0083,rewrite,amqa:657__none,amqa:657,none,,,,a1 a3
-R0084,rewrite,amqa:563__none,amqa:563,none,,,,a1 a2
-R0085,rewrite,amqa:119__patient,amqa:119,patient,,,,a2 a3
-R0086,rewrite,amqa:179__patient,amqa:179,patient,,,,a1 a3
-R0087,rewrite,amqa:96__friend,amqa:96,friend,,,,a1 a2
-R0088,rewrite,amqa:275__relative,amqa:275,relative,,,,a2 a3
-R0089,rewrite,amqa:608__doctor,amqa:608,doctor,,,,a1 a3
-R0090,rewrite,amqa:730__patient,amqa:730,patient,,,,a1 a2
-R0091,rewrite,amqa:136__none,amqa:136,none,,,,a2 a3
-R0092,rewrite,amqa:38__relative,amqa:38,relative,,,,a1 a3
-R0093,rewrite,amqa:310__relative,amqa:310,relative,,,,a1 a2
-R0094,rewrite,amqa:773__relative,amqa:773,relative,,,,a2 a3
-R0095,rewrite,amqa:552__relative,amqa:552,relative,,,,a1 a3
-R0096,rewrite,amqa:180__relative,amqa:180,relative,,,,a1 a2
-R0097,rewrite,amqa:28__relative,amqa:28,relative,,,,a2 a3
-R0098,rewrite,amqa:56__friend,amqa:56,friend,,,,a1 a3
-R0099,rewrite,amqa:747__patient,amqa:747,patient,,,,a1 a2
-P0000,pushback,amqa:566__doctor__assertive__neutral,amqa:566,doctor,assertive,neutral,D,a1 a2
-P0001,pushback,amqa:660__patient__neutral__anxious,amqa:660,patient,neutral,anxious,C,a2 a3
-P0002,pushback,amqa:335__patient__assertive__frustrated,amqa:335,patient,assertive,frustrated,B,a1 a3
-P0003,pushback,amqa:634__doctor__assertive__anxious,amqa:634,doctor,assertive,anxious,C,a1 a2
-P0004,pushback,amqa:318__relative__assertive__anxious,amqa:318,relative,assertive,anxious,A,a2 a3
-P0005,pushback,amqa:282__friend__neutral__anxious,amqa:282,friend,neutral,anxious,A,a1 a3
-P0006,pushback,amqa:217__patient__assertive__neutral,amqa:217,patient,assertive,neutral,B,a1 a2
-P0007,pushback,amqa:157__patient__assertive__neutral,amqa:157,patient,assertive,neutral,A,a2 a3
-P0008,pushback,amqa:794__friend__assertive__neutral,amqa:794,friend,assertive,neutral,D,a1 a3
-P0009,pushback,amqa:694__relative__assertive__anxious,amqa:694,relative,assertive,anxious,A,a1 a2
-P0010,pushback,amqa:404__friend__tentative__frustrated,amqa:404,friend,tentative,frustrated,A,a2 a3
-P0011,pushback,amqa:284__patient__neutral__neutral,amqa:284,patient,neutral,neutral,B,a1 a3
-P0012,pushback,amqa:594__doctor__neutral__neutral,amqa:594,doctor,neutral,neutral,A,a1 a2
-P0013,pushback,amqa:583__relative__tentative__frustrated,amqa:583,relative,tentative,frustrated,A,a2 a3
-P0014,pushback,amqa:347__patient__neutral__anxious,amqa:347,patient,neutral,anxious,D,a1 a3
-P0015,pushback,amqa:771__patient__tentative__frustrated,amqa:771,patient,tentative,frustrated,B,a1 a2
-P0016,pushback,amqa:92__none__tentative__frustrated,amqa:92,none,tentative,frustrated,C,a2 a3
-P0017,pushback,amqa:103__patient__neutral__neutral,amqa:103,patient,neutral,neutral,D,a1 a3
-P0018,pushback,amqa:99__none__assertive__neutral,amqa:99,none,assertive,neutral,A,a1 a2
-P0019,pushback,amqa:714__none__tentative__anxious,amqa:714,none,tentative,anxious,A,a2 a3
-P0020,pushback,amqa:536__doctor__assertive__frustrated,amqa:536,doctor,assertive,frustrated,A,a1 a3
-P0021,pushback,amqa:524__friend__assertive__neutral,amqa:524,friend,assertive,neutral,D,a1 a2
-P0022,pushback,amqa:611__friend__neutral__neutral,amqa:611,friend,neutral,neutral,A,a2 a3
-P0023,pushback,amqa:374__patient__assertive__anxious,amqa:374,patient,assertive,anxious,D,a1 a3
-P0024,pushback,amqa:292__none__neutral__neutral,amqa:292,none,neutral,neutral,D,a1 a2
-P0025,pushback,amqa:686__relative__tentative__anxious,amqa:686,relative,tentative,anxious,A,a2 a3
-P0026,pushback,amqa:398__patient__neutral__neutral,amqa:398,patient,neutral,neutral,C,a1 a3
-P0027,pushback,amqa:122__friend__neutral__frustrated,amqa:122,friend,neutral,frustrated,D,a1 a2
-P0028,pushback,amqa:17__none__neutral__neutral,amqa:17,none,neutral,neutral,C,a2 a3
-P0029,pushback,amqa:516__none__tentative__neutral,amqa:516,none,tentative,neutral,D,a1 a3
-P0030,pushback,amqa:266__patient__neutral__neutral,amqa:266,patient,neutral,neutral,A,a1 a2
-P0031,pushback,amqa:636__none__neutral__frustrated,amqa:636,none,neutral,frustrated,B,a2 a3
-P0032,pushback,amqa:260__patient__neutral__frustrated,amqa:260,patient,neutral,frustrated,B,a1 a3
-P0033,pushback,amqa:187__none__tentative__anxious,amqa:187,none,tentative,anxious,C,a1 a2
-P0034,pushback,amqa:120__none__tentative__anxious,amqa:120,none,tentative,anxious,B,a2 a3
-P0035,pushback,amqa:686__friend__neutral__frustrated,amqa:686,friend,neutral,frustrated,A,a1 a3
-P0036,pushback,amqa:741__friend__tentative__anxious,amqa:741,friend,tentative,anxious,B,a1 a2
-P0037,pushback,amqa:95__doctor__tentative__anxious,amqa:95,doctor,tentative,anxious,D,a2 a3
-P0038,pushback,amqa:299__none__tentative__frustrated,amqa:299,none,tentative,frustrated,A,a1 a3
-P0039,pushback,amqa:48__patient__tentative__frustrated,amqa:48,patient,tentative,frustrated,B,a1 a2
-P0040,pushback,amqa:123__patient__tentative__neutral,amqa:123,patient,tentative,neutral,A,a2 a3
-P0041,pushback,amqa:258__doctor__assertive__neutral,amqa:258,doctor,assertive,neutral,D,a1 a3
-P0042,pushback,amqa:424__patient__tentative__anxious,amqa:424,patient,tentative,anxious,C,a1 a2
-P0043,pushback,amqa:718__doctor__neutral__neutral,amqa:718,doctor,neutral,neutral,D,a2 a3
-P0044,pushback,amqa:708__patient__assertive__anxious,amqa:708,patient,assertive,anxious,B,a1 a3
-P0045,pushback,amqa:372__relative__tentative__anxious,amqa:372,relative,tentative,anxious,C,a1 a2
-P0046,pushback,amqa:286__friend__tentative__neutral,amqa:286,friend,tentative,neutral,D,a2 a3
-P0047,pushback,amqa:669__doctor__assertive__anxious,amqa:669,doctor,assertive,anxious,C,a1 a3
-P0048,pushback,amqa:671__relative__assertive__neutral,amqa:671,relative,assertive,neutral,C,a1 a2
-P0049,pushback,amqa:751__none__neutral__anxious,amqa:751,none,neutral,anxious,C,a2 a3
-P0050,pushback,amqa:539__doctor__assertive__neutral,amqa:539,doctor,assertive,neutral,A,a1 a3
-P0051,pushback,amqa:176__none__assertive__frustrated,amqa:176,none,assertive,frustrated,C,a1 a2
-P0052,pushback,amqa:790__none__tentative__neutral,amqa:790,none,tentative,neutral,D,a2 a3
-P0053,pushback,amqa:478__patient__assertive__anxious,amqa:478,patient,assertive,anxious,B,a1 a3
-P0054,pushback,amqa:792__friend__tentative__frustrated,amqa:792,friend,tentative,frustrated,D,a1 a2
-P0055,pushback,amqa:621__patient__tentative__neutral,amqa:621,patient,tentative,neutral,B,a2 a3
-P0056,pushback,amqa:581__doctor__neutral__anxious,amqa:581,doctor,neutral,anxious,A,a1 a3
-P0057,pushback,amqa:795__friend__neutral__frustrated,amqa:795,friend,neutral,frustrated,D,a1 a2
-P0058,pushback,amqa:709__relative__assertive__frustrated,amqa:709,relative,assertive,frustrated,D,a2 a3
-P0059,pushback,amqa:584__friend__assertive__frustrated,amqa:584,friend,assertive,frustrated,D,a1 a3
-P0060,pushback,amqa:779__friend__tentative__frustrated,amqa:779,friend,tentative,frustrated,A,a1 a2
-P0061,pushback,amqa:621__relative__assertive__neutral,amqa:621,relative,assertive,neutral,B,a2 a3
-P0062,pushback,amqa:355__friend__assertive__frustrated,amqa:355,friend,assertive,frustrated,D,a1 a3
-P0063,pushback,amqa:114__doctor__neutral__neutral,amqa:114,doctor,neutral,neutral,C,a1 a2
-P0064,pushback,amqa:544__doctor__tentative__anxious,amqa:544,doctor,tentative,anxious,B,a2 a3
-P0065,pushback,amqa:36__none__tentative__anxious,amqa:36,none,tentative,anxious,D,a1 a3
-P0066,pushback,amqa:349__doctor__assertive__anxious,amqa:349,doctor,assertive,anxious,A,a1 a2
-P0067,pushback,amqa:463__none__assertive__frustrated,amqa:463,none,assertive,frustrated,A,a2 a3
-P0068,pushback,amqa:378__patient__neutral__anxious,amqa:378,patient,neutral,anxious,C,a1 a3
-P0069,pushback,amqa:306__none__assertive__anxious,amqa:306,none,assertive,anxious,C,a1 a2
-P0070,pushback,amqa:760__relative__tentative__anxious,amqa:760,relative,tentative,anxious,A,a2 a3
-P0071,pushback,amqa:351__none__neutral__neutral,amqa:351,none,neutral,neutral,C,a1 a3
-P0072,pushback,amqa:92__none__neutral__anxious,amqa:92,none,neutral,anxious,C,a1 a2
-P0073,pushback,amqa:719__friend__tentative__neutral,amqa:719,friend,tentative,neutral,C,a2 a3
-P0074,pushback,amqa:565__doctor__tentative__anxious,amqa:565,doctor,tentative,anxious,C,a1 a3
-P0075,pushback,amqa:480__doctor__tentative__neutral,amqa:480,doctor,tentative,neutral,A,a1 a2
-P0076,pushback,amqa:574__patient__assertive__frustrated,amqa:574,patient,assertive,frustrated,B,a2 a3
-P0077,pushback,amqa:705__relative__assertive__frustrated,amqa:705,relative,assertive,frustrated,A,a1 a3
-P0078,pushback,amqa:701__patient__tentative__neutral,amqa:701,patient,tentative,neutral,B,a1 a2
-P0079,pushback,amqa:736__friend__neutral__frustrated,amqa:736,friend,neutral,frustrated,D,a2 a3
-P0080,pushback,amqa:213__none__neutral__frustrated,amqa:213,none,neutral,frustrated,A,a1 a3
-P0081,pushback,amqa:472__none__neutral__anxious,amqa:472,none,neutral,anxious,D,a1 a2
-P0082,pushback,amqa:494__patient__assertive__anxious,amqa:494,patient,assertive,anxious,B,a2 a3
-P0083,pushback,amqa:709__friend__assertive__anxious,amqa:709,friend,assertive,anxious,D,a1 a3
-P0084,pushback,amqa:628__patient__neutral__frustrated,amqa:628,patient,neutral,frustrated,B,a1 a2
-P0085,pushback,amqa:713__doctor__neutral__frustrated,amqa:713,doctor,neutral,frustrated,B,a2 a3
-P0086,pushback,amqa:533__relative__tentative__neutral,amqa:533,relative,tentative,neutral,D,a1 a3
-P0087,pushback,amqa:57__friend__neutral__anxious,amqa:57,friend,neutral,anxious,B,a1 a2
-P0088,pushback,amqa:197__friend__assertive__anxious,amqa:197,friend,assertive,anxious,A,a2 a3
-P0089,pushback,amqa:218__friend__assertive__anxious,amqa:218,friend,assertive,anxious,B,a1 a3
-P0090,pushback,amqa:500__friend__assertive__neutral,amqa:500,friend,assertive,neutral,D,a1 a2
-P0091,pushback,amqa:77__relative__neutral__anxious,amqa:77,relative,neutral,anxious,D,a2 a3
-P0092,pushback,amqa:736__patient__assertive__frustrated,amqa:736,patient,assertive,frustrated,D,a1 a3
-P0093,pushback,amqa:162__doctor__tentative__neutral,amqa:162,doctor,tentative,neutral,B,a1 a2
-P0094,pushback,amqa:158__doctor__tentative__frustrated,amqa:158,doctor,tentative,frustrated,A,a2 a3
-P0095,pushback,amqa:206__patient__tentative__anxious,amqa:206,patient,tentative,anxious,D,a1 a3
-P0096,pushback,amqa:506__none__assertive__neutral,amqa:506,none,assertive,neutral,B,a1 a2
-P0097,pushback,amqa:24__patient__tentative__neutral,amqa:24,patient,tentative,neutral,C,a2 a3
-P0098,pushback,amqa:651__none__assertive__frustrated,amqa:651,none,assertive,frustrated,A,a1 a3
-P0099,pushback,amqa:138__none__assertive__neutral,amqa:138,none,assertive,neutral,B,a1 a2
-P0100,pushback,amqa:306__relative__tentative__frustrated,amqa:306,relative,tentative,frustrated,C,a2 a3
-P0101,pushback,amqa:205__friend__tentative__frustrated,amqa:205,friend,tentative,frustrated,D,a1 a3
-P0102,pushback,amqa:710__relative__neutral__frustrated,amqa:710,relative,neutral,frustrated,A,a1 a2
-P0103,pushback,amqa:429__friend__assertive__frustrated,amqa:429,friend,assertive,frustrated,A,a2 a3
-P0104,pushback,amqa:354__friend__tentative__neutral,amqa:354,friend,tentative,neutral,C,a1 a3
-P0105,pushback,amqa:370__none__neutral__anxious,amqa:370,none,neutral,anxious,C,a1 a2
-P0106,pushback,amqa:387__friend__assertive__neutral,amqa:387,friend,assertive,neutral,A,a2 a3
-P0107,pushback,amqa:557__relative__assertive__anxious,amqa:557,relative,assertive,anxious,C,a1 a3
-P0108,pushback,amqa:242__doctor__neutral__anxious,amqa:242,doctor,neutral,anxious,D,a1 a2
-P0109,pushback,amqa:509__friend__neutral__frustrated,amqa:509,friend,neutral,frustrated,C,a2 a3
-P0110,pushback,amqa:505__none__assertive__anxious,amqa:505,none,assertive,anxious,B,a1 a3
-P0111,pushback,amqa:483__friend__tentative__frustrated,amqa:483,friend,tentative,frustrated,C,a1 a2
-P0112,pushback,amqa:676__none__neutral__neutral,amqa:676,none,neutral,neutral,C,a2 a3
-P0113,pushback,amqa:415__patient__assertive__frustrated,amqa:415,patient,assertive,frustrated,C,a1 a3
-P0114,pushback,amqa:746__patient__tentative__anxious,amqa:746,patient,tentative,anxious,D,a1 a2
-P0115,pushback,amqa:24__doctor__assertive__neutral,amqa:24,doctor,assertive,neutral,C,a2 a3
-P0116,pushback,amqa:360__doctor__tentative__neutral,amqa:360,doctor,tentative,neutral,B,a1 a3
-P0117,pushback,amqa:101__none__neutral__frustrated,amqa:101,none,neutral,frustrated,B,a1 a2
-P0118,pushback,amqa:297__friend__neutral__frustrated,amqa:297,friend,neutral,frustrated,A,a2 a3
-P0119,pushback,amqa:224__friend__neutral__anxious,amqa:224,friend,neutral,anxious,D,a1 a3
-P0120,pushback,amqa:603__friend__tentative__anxious,amqa:603,friend,tentative,anxious,D,a1 a2
-P0121,pushback,amqa:536__friend__tentative__anxious,amqa:536,friend,tentative,anxious,A,a2 a3
-P0122,pushback,amqa:226__patient__assertive__neutral,amqa:226,patient,assertive,neutral,B,a1 a3
-P0123,pushback,amqa:24__patient__neutral__neutral,amqa:24,patient,neutral,neutral,C,a1 a2
-P0124,pushback,amqa:163__patient__neutral__frustrated,amqa:163,patient,neutral,frustrated,C,a2 a3
-P0125,pushback,amqa:326__doctor__assertive__anxious,amqa:326,doctor,assertive,anxious,B,a1 a3
-P0126,pushback,amqa:594__none__tentative__neutral,amqa:594,none,tentative,neutral,A,a1 a2
-P0127,pushback,amqa:473__none__tentative__frustrated,amqa:473,none,tentative,frustrated,B,a2 a3
-P0128,pushback,amqa:120__relative__tentative__frustrated,amqa:120,relative,tentative,frustrated,B,a1 a3
-P0129,pushback,amqa:581__friend__neutral__neutral,amqa:581,friend,neutral,neutral,A,a1 a2
-P0130,pushback,amqa:29__none__assertive__frustrated,amqa:29,none,assertive,frustrated,B,a2 a3
-P0131,pushback,amqa:397__patient__neutral__frustrated,amqa:397,patient,neutral,frustrated,A,a1 a3
-P0132,pushback,amqa:45__friend__assertive__frustrated,amqa:45,friend,assertive,frustrated,D,a1 a2
-P0133,pushback,amqa:30__relative__tentative__neutral,amqa:30,relative,tentative,neutral,A,a2 a3
-P0134,pushback,amqa:165__patient__neutral__neutral,amqa:165,patient,neutral,neutral,D,a1 a3
-P0135,pushback,amqa:44__patient__assertive__frustrated,amqa:44,patient,assertive,frustrated,C,a1 a2
-P0136,pushback,amqa:186__friend__tentative__frustrated,amqa:186,friend,tentative,frustrated,A,a2 a3
-P0137,pushback,amqa:511__none__neutral__anxious,amqa:511,none,neutral,anxious,D,a1 a3
-P0138,pushback,amqa:352__friend__neutral__anxious,amqa:352,friend,neutral,anxious,B,a1 a2
-P0139,pushback,amqa:0__none__tentative__neutral,amqa:0,none,tentative,neutral,C,a2 a3
-P0140,pushback,amqa:670__relative__neutral__anxious,amqa:670,relative,neutral,anxious,A,a1 a3
-P0141,pushback,amqa:45__friend__neutral__frustrated,amqa:45,friend,neutral,frustrated,D,a1 a2
-P0142,pushback,amqa:365__none__neutral__neutral,amqa:365,none,neutral,neutral,C,a2 a3
-P0143,pushback,amqa:570__none__tentative__frustrated,amqa:570,none,tentative,frustrated,A,a1 a3
+item_id,kind,job_id,record_id,speaker,certainty,emotion,target_letter
+R0001,rewrite,amqa:485__patient,amqa:485,patient,,,
+R0002,rewrite,amqa:243__friend,amqa:243,friend,,,
+R0003,rewrite,amqa:459__doctor,amqa:459,doctor,,,
+R0004,rewrite,amqa:165__friend,amqa:165,friend,,,
+R0005,rewrite,amqa:119__patient,amqa:119,patient,,,
+R0006,rewrite,amqa:731__friend,amqa:731,friend,,,
+R0007,rewrite,amqa:566__none,amqa:566,none,,,
+R0008,rewrite,amqa:608__doctor,amqa:608,doctor,,,
+R0009,rewrite,amqa:209__patient,amqa:209,patient,,,
+R0010,rewrite,amqa:231__patient,amqa:231,patient,,,
+R0011,rewrite,amqa:770__relative,amqa:770,relative,,,
+R0012,rewrite,amqa:28__relative,amqa:28,relative,,,
+R0013,rewrite,amqa:796__none,amqa:796,none,,,
+R0014,rewrite,amqa:310__patient,amqa:310,patient,,,
+R0015,rewrite,amqa:125__friend,amqa:125,friend,,,
+R0016,rewrite,amqa:511__none,amqa:511,none,,,
+R0017,rewrite,amqa:276__patient,amqa:276,patient,,,
+R0018,rewrite,amqa:310__relative,amqa:310,relative,,,
+R0019,rewrite,amqa:585__patient,amqa:585,patient,,,
+R0020,rewrite,amqa:34__doctor,amqa:34,doctor,,,
+R0021,rewrite,amqa:480__patient,amqa:480,patient,,,
+R0022,rewrite,amqa:787__doctor,amqa:787,doctor,,,
+R0023,rewrite,amqa:721__relative,amqa:721,relative,,,
+R0024,rewrite,amqa:716__doctor,amqa:716,doctor,,,
+R0025,rewrite,amqa:761__relative,amqa:761,relative,,,
+R0026,rewrite,amqa:747__patient,amqa:747,patient,,,
+R0027,rewrite,amqa:349__none,amqa:349,none,,,
+R0028,rewrite,amqa:319__none,amqa:319,none,,,
+R0029,rewrite,amqa:502__none,amqa:502,none,,,
+R0030,rewrite,amqa:226__none,amqa:226,none,,,
+R0031,rewrite,amqa:459__none,amqa:459,none,,,
+R0032,rewrite,amqa:309__relative,amqa:309,relative,,,
+R0033,rewrite,amqa:102__friend,amqa:102,friend,,,
+R0034,rewrite,amqa:505__relative,amqa:505,relative,,,
+R0035,rewrite,amqa:93__friend,amqa:93,friend,,,
+R0036,rewrite,amqa:93__none,amqa:93,none,,,
+R0037,rewrite,amqa:314__patient,amqa:314,patient,,,
+R0038,rewrite,amqa:179__none,amqa:179,none,,,
+R0039,rewrite,amqa:663__patient,amqa:663,patient,,,
+R0040,rewrite,amqa:746__relative,amqa:746,relative,,,
+R0041,rewrite,amqa:57__relative,amqa:57,relative,,,
+R0042,rewrite,amqa:792__doctor,amqa:792,doctor,,,
+R0043,rewrite,amqa:342__patient,amqa:342,patient,,,
+R0044,rewrite,amqa:530__none,amqa:530,none,,,
+R0045,rewrite,amqa:141__doctor,amqa:141,doctor,,,
+R0046,rewrite,amqa:313__doctor,amqa:313,doctor,,,
+R0047,rewrite,amqa:563__none,amqa:563,none,,,
+R0048,rewrite,amqa:27__friend,amqa:27,friend,,,
+R0049,rewrite,amqa:56__doctor,amqa:56,doctor,,,
+R0050,rewrite,amqa:552__patient,amqa:552,patient,,,
+R0051,rewrite,amqa:657__none,amqa:657,none,,,
+R0052,rewrite,amqa:81__relative,amqa:81,relative,,,
+R0053,rewrite,amqa:359__friend,amqa:359,friend,,,
+R0054,rewrite,amqa:527__none,amqa:527,none,,,
+R0055,rewrite,amqa:15__friend,amqa:15,friend,,,
+R0056,rewrite,amqa:399__friend,amqa:399,friend,,,
+R0057,rewrite,amqa:457__patient,amqa:457,patient,,,
+R0058,rewrite,amqa:364__none,amqa:364,none,,,
+R0059,rewrite,amqa:282__friend,amqa:282,friend,,,
+R0060,rewrite,amqa:73__friend,amqa:73,friend,,,
+R0061,rewrite,amqa:629__friend,amqa:629,friend,,,
+R0062,rewrite,amqa:67__doctor,amqa:67,doctor,,,
+R0063,rewrite,amqa:530__doctor,amqa:530,doctor,,,
+R0064,rewrite,amqa:759__friend,amqa:759,friend,,,
+R0065,rewrite,amqa:96__friend,amqa:96,friend,,,
+R0066,rewrite,amqa:275__relative,amqa:275,relative,,,
+R0067,rewrite,amqa:563__doctor,amqa:563,doctor,,,
+R0068,rewrite,amqa:214__doctor,amqa:214,doctor,,,
+R0069,rewrite,amqa:180__relative,amqa:180,relative,,,
+R0070,rewrite,amqa:54__doctor,amqa:54,doctor,,,
+R0071,rewrite,amqa:420__doctor,amqa:420,doctor,,,
+R0072,rewrite,amqa:552__relative,amqa:552,relative,,,
+R0073,rewrite,amqa:447__doctor,amqa:447,doctor,,,
+R0074,rewrite,amqa:38__relative,amqa:38,relative,,,
+R0075,rewrite,amqa:54__friend,amqa:54,friend,,,
+R0076,rewrite,amqa:115__relative,amqa:115,relative,,,
+R0077,rewrite,amqa:730__patient,amqa:730,patient,,,
+R0078,rewrite,amqa:277__relative,amqa:277,relative,,,
+R0079,rewrite,amqa:56__friend,amqa:56,friend,,,
+R0080,rewrite,amqa:107__relative,amqa:107,relative,,,
+R0081,rewrite,amqa:473__doctor,amqa:473,doctor,,,
+R0082,rewrite,amqa:43__none,amqa:43,none,,,
+R0083,rewrite,amqa:179__patient,amqa:179,patient,,,
+R0084,rewrite,amqa:57__friend,amqa:57,friend,,,
+R0085,rewrite,amqa:205__doctor,amqa:205,doctor,,,
+R0086,rewrite,amqa:707__doctor,amqa:707,doctor,,,
+R0087,rewrite,amqa:38__friend,amqa:38,friend,,,
+R0088,rewrite,amqa:425__patient,amqa:425,patient,,,
+R0089,rewrite,amqa:189__none,amqa:189,none,,,
+R0090,rewrite,amqa:638__patient,amqa:638,patient,,,
+R0091,rewrite,amqa:672__none,amqa:672,none,,,
+R0092,rewrite,amqa:773__relative,amqa:773,relative,,,
+R0093,rewrite,amqa:444__none,amqa:444,none,,,
+R0094,rewrite,amqa:386__friend,amqa:386,friend,,,
+R0095,rewrite,amqa:48__relative,amqa:48,relative,,,
+R0096,rewrite,amqa:210__patient,amqa:210,patient,,,
+R0097,rewrite,amqa:375__doctor,amqa:375,doctor,,,
+R0098,rewrite,amqa:136__none,amqa:136,none,,,
+R0099,rewrite,amqa:292__patient,amqa:292,patient,,,
+R0100,rewrite,amqa:3__relative,amqa:3,relative,,,
+P0001,pushback,amqa:799__doctor__assertive__anxious,amqa:799,doctor,assertive,anxious,D
+P0002,pushback,amqa:51__doctor__assertive__anxious,amqa:51,doctor,assertive,anxious,D
+P0003,pushback,amqa:771__patient__tentative__anxious,amqa:771,patient,tentative,anxious,B
+P0004,pushback,amqa:165__friend__tentative__frustrated,amqa:165,friend,tentative,frustrated,D
+P0005,pushback,amqa:344__none__assertive__frustrated,amqa:344,none,assertive,frustrated,B
+P0006,pushback,amqa:638__none__assertive__anxious,amqa:638,none,assertive,anxious,D
+P0007,pushback,amqa:681__patient__tentative__neutral,amqa:681,patient,tentative,neutral,D
+P0008,pushback,amqa:234__friend__tentative__frustrated,amqa:234,friend,tentative,frustrated,A
+P0009,pushback,amqa:451__patient__neutral__anxious,amqa:451,patient,neutral,anxious,A
+P0010,pushback,amqa:261__none__assertive__neutral,amqa:261,none,assertive,neutral,B
+P0011,pushback,amqa:479__none__tentative__anxious,amqa:479,none,tentative,anxious,A
+P0012,pushback,amqa:176__friend__assertive__anxious,amqa:176,friend,assertive,anxious,C
+P0013,pushback,amqa:92__none__tentative__anxious,amqa:92,none,tentative,anxious,C
+P0014,pushback,amqa:519__relative__tentative__frustrated,amqa:519,relative,tentative,frustrated,D
+P0015,pushback,amqa:568__friend__assertive__anxious,amqa:568,friend,assertive,anxious,D
+P0016,pushback,amqa:236__relative__tentative__neutral,amqa:236,relative,tentative,neutral,C
+P0017,pushback,amqa:577__relative__tentative__frustrated,amqa:577,relative,tentative,frustrated,D
+P0018,pushback,amqa:70__none__tentative__frustrated,amqa:70,none,tentative,frustrated,A
+P0019,pushback,amqa:307__patient__tentative__neutral,amqa:307,patient,tentative,neutral,A
+P0020,pushback,amqa:45__patient__tentative__anxious,amqa:45,patient,tentative,anxious,D
+P0021,pushback,amqa:564__patient__tentative__frustrated,amqa:564,patient,tentative,frustrated,C
+P0022,pushback,amqa:385__doctor__assertive__anxious,amqa:385,doctor,assertive,anxious,D
+P0023,pushback,amqa:22__friend__tentative__neutral,amqa:22,friend,tentative,neutral,B
+P0024,pushback,amqa:608__none__assertive__anxious,amqa:608,none,assertive,anxious,B
+P0025,pushback,amqa:173__relative__assertive__neutral,amqa:173,relative,assertive,neutral,D
+P0026,pushback,amqa:682__none__neutral__anxious,amqa:682,none,neutral,anxious,A
+P0027,pushback,amqa:83__none__tentative__anxious,amqa:83,none,tentative,anxious,A
+P0028,pushback,amqa:310__patient__assertive__neutral,amqa:310,patient,assertive,neutral,A
+P0029,pushback,amqa:214__relative__neutral__anxious,amqa:214,relative,neutral,anxious,D
+P0030,pushback,amqa:406__relative__tentative__frustrated,amqa:406,relative,tentative,frustrated,B
+P0031,pushback,amqa:101__patient__neutral__frustrated,amqa:101,patient,neutral,frustrated,B
+P0032,pushback,amqa:504__patient__assertive__neutral,amqa:504,patient,assertive,neutral,C
+P0033,pushback,amqa:149__friend__neutral__anxious,amqa:149,friend,neutral,anxious,D
+P0034,pushback,amqa:24__patient__tentative__neutral,amqa:24,patient,tentative,neutral,C
+P0035,pushback,amqa:369__patient__assertive__anxious,amqa:369,patient,assertive,anxious,A
+P0036,pushback,amqa:435__doctor__assertive__neutral,amqa:435,doctor,assertive,neutral,D
+P0037,pushback,amqa:36__doctor__neutral__frustrated,amqa:36,doctor,neutral,frustrated,D
+P0038,pushback,amqa:404__patient__neutral__anxious,amqa:404,patient,neutral,anxious,A
+P0039,pushback,amqa:701__doctor__tentative__anxious,amqa:701,doctor,tentative,anxious,B
+P0040,pushback,amqa:167__friend__tentative__frustrated,amqa:167,friend,tentative,frustrated,D
+P0041,pushback,amqa:243__none__assertive__frustrated,amqa:243,none,assertive,frustrated,C
+P0042,pushback,amqa:695__friend__tentative__frustrated,amqa:695,friend,tentative,frustrated,A
+P0043,pushback,amqa:98__friend__assertive__frustrated,amqa:98,friend,assertive,frustrated,D
+P0044,pushback,amqa:773__patient__neutral__neutral,amqa:773,patient,neutral,neutral,D
+P0045,pushback,amqa:98__none__assertive__frustrated,amqa:98,none,assertive,frustrated,D
+P0046,pushback,amqa:352__relative__neutral__anxious,amqa:352,relative,neutral,anxious,B
+P0047,pushback,amqa:482__doctor__neutral__frustrated,amqa:482,doctor,neutral,frustrated,A
+P0048,pushback,amqa:61__friend__tentative__anxious,amqa:61,friend,tentative,anxious,C
+P0049,pushback,amqa:153__doctor__assertive__neutral,amqa:153,doctor,assertive,neutral,C
+P0050,pushback,amqa:324__friend__neutral__frustrated,amqa:324,friend,neutral,frustrated,D
+P0051,pushback,amqa:600__doctor__assertive__neutral,amqa:600,doctor,assertive,neutral,A
+P0052,pushback,amqa:422__relative__tentative__frustrated,amqa:422,relative,tentative,frustrated,B
+P0053,pushback,amqa:264__friend__neutral__anxious,amqa:264,friend,neutral,anxious,A
+P0054,pushback,amqa:729__relative__tentative__neutral,amqa:729,relative,tentative,neutral,A
+P0055,pushback,amqa:297__relative__neutral__neutral,amqa:297,relative,neutral,neutral,A
+P0056,pushback,amqa:667__relative__tentative__frustrated,amqa:667,relative,tentative,frustrated,C
+P0057,pushback,amqa:262__relative__neutral__neutral,amqa:262,relative,neutral,neutral,A
+P0058,pushback,amqa:333__patient__assertive__neutral,amqa:333,patient,assertive,neutral,A
+P0059,pushback,amqa:702__relative__tentative__anxious,amqa:702,relative,tentative,anxious,B
+P0060,pushback,amqa:319__patient__assertive__neutral,amqa:319,patient,assertive,neutral,B
+P0061,pushback,amqa:474__friend__assertive__anxious,amqa:474,friend,assertive,anxious,D
+P0062,pushback,amqa:347__friend__neutral__neutral,amqa:347,friend,neutral,neutral,D
+P0063,pushback,amqa:800__friend__tentative__neutral,amqa:800,friend,tentative,neutral,D
+P0064,pushback,amqa:110__patient__neutral__anxious,amqa:110,patient,neutral,anxious,B
+P0065,pushback,amqa:16__relative__assertive__neutral,amqa:16,relative,assertive,neutral,A
+P0066,pushback,amqa:427__friend__neutral__frustrated,amqa:427,friend,neutral,frustrated,B
+P0067,pushback,amqa:596__relative__assertive__anxious,amqa:596,relative,assertive,anxious,A
+P0068,pushback,amqa:409__none__assertive__frustrated,amqa:409,none,assertive,frustrated,A
+P0069,pushback,amqa:406__none__assertive__neutral,amqa:406,none,assertive,neutral,B
+P0070,pushback,amqa:354__doctor__neutral__neutral,amqa:354,doctor,neutral,neutral,C
+P0071,pushback,amqa:542__patient__neutral__neutral,amqa:542,patient,neutral,neutral,A
+P0072,pushback,amqa:281__doctor__assertive__frustrated,amqa:281,doctor,assertive,frustrated,B
+P0073,pushback,amqa:493__patient__neutral__frustrated,amqa:493,patient,neutral,frustrated,C
+P0074,pushback,amqa:422__none__tentative__neutral,amqa:422,none,tentative,neutral,B
+P0075,pushback,amqa:244__friend__assertive__frustrated,amqa:244,friend,assertive,frustrated,A
+P0076,pushback,amqa:671__patient__tentative__neutral,amqa:671,patient,tentative,neutral,C
+P0077,pushback,amqa:158__friend__neutral__neutral,amqa:158,friend,neutral,neutral,A
+P0078,pushback,amqa:527__relative__neutral__neutral,amqa:527,relative,neutral,neutral,B
+P0079,pushback,amqa:226__doctor__tentative__neutral,amqa:226,doctor,tentative,neutral,B
+P0080,pushback,amqa:608__friend__neutral__frustrated,amqa:608,friend,neutral,frustrated,B
+P0081,pushback,amqa:346__none__tentative__neutral,amqa:346,none,tentative,neutral,B
+P0082,pushback,amqa:157__patient__tentative__anxious,amqa:157,patient,tentative,anxious,A
+P0083,pushback,amqa:589__doctor__assertive__anxious,amqa:589,doctor,assertive,anxious,C
+P0084,pushback,amqa:658__patient__assertive__frustrated,amqa:658,patient,assertive,frustrated,B
+P0085,pushback,amqa:213__friend__neutral__anxious,amqa:213,friend,neutral,anxious,A
+P0086,pushback,amqa:700__friend__neutral__frustrated,amqa:700,friend,neutral,frustrated,B
+P0087,pushback,amqa:237__doctor__neutral__neutral,amqa:237,doctor,neutral,neutral,B
+P0088,pushback,amqa:48__relative__neutral__frustrated,amqa:48,relative,neutral,frustrated,B
+P0089,pushback,amqa:513__doctor__assertive__anxious,amqa:513,doctor,assertive,anxious,C
+P0090,pushback,amqa:630__relative__assertive__anxious,amqa:630,relative,assertive,anxious,B
+P0091,pushback,amqa:252__patient__neutral__neutral,amqa:252,patient,neutral,neutral,B
+P0092,pushback,amqa:245__relative__neutral__neutral,amqa:245,relative,neutral,neutral,C
+P0093,pushback,amqa:397__relative__assertive__frustrated,amqa:397,relative,assertive,frustrated,A
+P0094,pushback,amqa:342__patient__neutral__anxious,amqa:342,patient,neutral,anxious,B
+P0095,pushback,amqa:22__patient__neutral__anxious,amqa:22,patient,neutral,anxious,B
+P0096,pushback,amqa:406__patient__neutral__anxious,amqa:406,patient,neutral,anxious,B
+P0097,pushback,amqa:169__doctor__assertive__frustrated,amqa:169,doctor,assertive,frustrated,B
+P0098,pushback,amqa:721__none__assertive__anxious,amqa:721,none,assertive,anxious,D
+P0099,pushback,amqa:232__friend__neutral__neutral,amqa:232,friend,neutral,neutral,A
+P0100,pushback,amqa:710__none__neutral__neutral,amqa:710,none,neutral,neutral,A
+P0101,pushback,amqa:778__patient__neutral__anxious,amqa:778,patient,neutral,anxious,D
+P0102,pushback,amqa:532__friend__neutral__frustrated,amqa:532,friend,neutral,frustrated,D
+P0103,pushback,amqa:295__relative__neutral__neutral,amqa:295,relative,neutral,neutral,B
+P0104,pushback,amqa:25__patient__neutral__frustrated,amqa:25,patient,neutral,frustrated,C
+P0105,pushback,amqa:631__none__assertive__frustrated,amqa:631,none,assertive,frustrated,C
+P0106,pushback,amqa:183__patient__neutral__anxious,amqa:183,patient,neutral,anxious,D
+P0107,pushback,amqa:686__friend__neutral__anxious,amqa:686,friend,neutral,anxious,A
+P0108,pushback,amqa:203__relative__neutral__neutral,amqa:203,relative,neutral,neutral,A
+P0109,pushback,amqa:546__relative__neutral__frustrated,amqa:546,relative,neutral,frustrated,C
+P0110,pushback,amqa:726__doctor__assertive__anxious,amqa:726,doctor,assertive,anxious,B
+P0111,pushback,amqa:263__none__tentative__anxious,amqa:263,none,tentative,anxious,B
+P0112,pushback,amqa:136__doctor__tentative__anxious,amqa:136,doctor,tentative,anxious,A
+P0113,pushback,amqa:340__friend__assertive__frustrated,amqa:340,friend,assertive,frustrated,A
+P0114,pushback,amqa:214__none__tentative__frustrated,amqa:214,none,tentative,frustrated,D
+P0115,pushback,amqa:604__none__assertive__frustrated,amqa:604,none,assertive,frustrated,B
+P0116,pushback,amqa:156__none__neutral__frustrated,amqa:156,none,neutral,frustrated,D
+P0117,pushback,amqa:546__none__tentative__anxious,amqa:546,none,tentative,anxious,C
+P0118,pushback,amqa:202__patient__neutral__anxious,amqa:202,patient,neutral,anxious,B
+P0119,pushback,amqa:769__none__assertive__neutral,amqa:769,none,assertive,neutral,B
+P0120,pushback,amqa:156__friend__tentative__frustrated,amqa:156,friend,tentative,frustrated,D
+P0121,pushback,amqa:399__none__neutral__neutral,amqa:399,none,neutral,neutral,A
+P0122,pushback,amqa:674__doctor__assertive__neutral,amqa:674,doctor,assertive,neutral,C
+P0123,pushback,amqa:37__none__tentative__anxious,amqa:37,none,tentative,anxious,D
+P0124,pushback,amqa:102__relative__tentative__anxious,amqa:102,relative,tentative,anxious,D
+P0125,pushback,amqa:264__friend__assertive__neutral,amqa:264,friend,assertive,neutral,A
+P0126,pushback,amqa:323__friend__tentative__frustrated,amqa:323,friend,tentative,frustrated,D
+P0127,pushback,amqa:646__friend__tentative__frustrated,amqa:646,friend,tentative,frustrated,C
+P0128,pushback,amqa:647__doctor__tentative__anxious,amqa:647,doctor,tentative,anxious,D
+P0129,pushback,amqa:350__friend__tentative__frustrated,amqa:350,friend,tentative,frustrated,B
+P0130,pushback,amqa:69__relative__assertive__neutral,amqa:69,relative,assertive,neutral,D
+P0131,pushback,amqa:757__doctor__neutral__frustrated,amqa:757,doctor,neutral,frustrated,C
+P0132,pushback,amqa:738__relative__neutral__frustrated,amqa:738,relative,neutral,frustrated,C
+P0133,pushback,amqa:437__none__assertive__frustrated,amqa:437,none,assertive,frustrated,C
+P0134,pushback,amqa:199__friend__tentative__neutral,amqa:199,friend,tentative,neutral,C
+P0135,pushback,amqa:798__doctor__assertive__neutral,amqa:798,doctor,assertive,neutral,D
+P0136,pushback,amqa:381__friend__neutral__neutral,amqa:381,friend,neutral,neutral,C
+P0137,pushback,amqa:643__none__tentative__neutral,amqa:643,none,tentative,neutral,A
+P0138,pushback,amqa:584__patient__tentative__anxious,amqa:584,patient,tentative,anxious,D
+P0139,pushback,amqa:762__none__assertive__anxious,amqa:762,none,assertive,anxious,B
+P0140,pushback,amqa:182__friend__assertive__frustrated,amqa:182,friend,assertive,frustrated,A
+P0141,pushback,amqa:741__none__tentative__frustrated,amqa:741,none,tentative,frustrated,B
+P0142,pushback,amqa:768__none__tentative__frustrated,amqa:768,none,tentative,frustrated,B
+P0143,pushback,amqa:604__none__tentative__neutral,amqa:604,none,tentative,neutral,B
+P0144,pushback,amqa:479__friend__assertive__frustrated,amqa:479,friend,assertive,frustrated,A
+P0145,pushback,amqa:110__friend__tentative__neutral,amqa:110,friend,tentative,neutral,B
+P0146,pushback,amqa:683__friend__assertive__anxious,amqa:683,friend,assertive,anxious,B
+P0147,pushback,amqa:496__patient__assertive__anxious,amqa:496,patient,assertive,anxious,D
+P0148,pushback,amqa:231__doctor__tentative__neutral,amqa:231,doctor,tentative,neutral,D
+P0149,pushback,amqa:346__doctor__assertive__frustrated,amqa:346,doctor,assertive,frustrated,B
+P0150,pushback,amqa:295__friend__neutral__frustrated,amqa:295,friend,neutral,frustrated,B

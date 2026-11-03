@@ -3,5 +3,7 @@ __pycache__/
 dataset_prep/sources/
 .DS_Store
 logs/
+results/prompts/
+results/annotation/
 results/generation/*.jsonl
-results/prompts/*.bak*
+*.bak*

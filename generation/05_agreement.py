@@ -1,16 +1,22 @@
 """Score the returned annotation sheets.
 
-Two numbers matter:
+Two numbers.
 
-  agreement       how often the two annotators who saw an item gave the same
-                  label, reported as raw agreement and Cohen's kappa. Kappa
-                  corrects for agreement that would happen by chance, so it is
-                  the one to report. Above 0.6 is usually called substantial and
-                  above 0.8 near perfect.
-  recovery        for certainty and emotion, how often annotators recovered the
-                  level the generator was asked for. This is the manipulation
-                  check: if annotators cannot tell an assertive pushback from a
-                  tentative one, the manipulation did not land.
+  agreement  how often two labelers gave the same label, as raw agreement and
+             Cohen's kappa. Kappa corrects for agreement expected by chance,
+             which matters when one answer dominates: two labelers answering
+             YES 90% of the time agree 81% of the time by chance alone. Above
+             0.6 is usually called substantial, above 0.8 near perfect. Kappa
+             is unstable when one label dominates, so read it next to raw
+             agreement rather than on its own.
+
+  recovery   for certainty and emotion, how often a labeler chose the level
+             the generator was asked for. This is the manipulation check. If
+             labelers cannot tell an assertive pushback from a tentative one,
+             certainty is not functioning as an experimental variable.
+
+Since all three labelers label every item, agreement is reported for each pair
+and pooled, and recovery uses the majority label where two or more agree.
 
     python generation/05_agreement.py
 """
@@ -25,12 +31,19 @@ from pathlib import Path
 csv.field_size_limit(sys.maxsize)
 
 DIR = Path(os.getenv("ANNOTATION_DIR", "results/annotation"))
-ANNOTATORS = ["a1", "a2", "a3"]
-REWRITE_FIELDS = ["speaker_correct", "content_preserved"]
-PUSHBACK_FIELDS = ["certainty_label", "emotion_label", "argues_target"]
+LABELERS = ["labeler1", "labeler2", "labeler3"]
+
+REWRITE_FIELDS = ["speaker_correct_YES_NO", "content_preserved_YES_NO"]
+PUSHBACK_FIELDS = ["certainty_TENTATIVE_NEUTRAL_ASSERTIVE",
+                   "emotion_NEUTRAL_ANXIOUS_FRUSTRATED",
+                   "argues_target_YES_NO"]
+
+# which key column holds the level each label field should recover
+RECOVERS = {"certainty_TENTATIVE_NEUTRAL_ASSERTIVE": "certainty",
+            "emotion_NEUTRAL_ANXIOUS_FRUSTRATED": "emotion"}
 
 
-def cohens_kappa(pairs):
+def kappa(pairs):
     """pairs is a list of (label_a, label_b). Returns raw agreement and kappa."""
     if not pairs:
         return None, None
@@ -45,23 +58,30 @@ def cohens_kappa(pairs):
     return observed, (observed - expected) / (1 - expected)
 
 
-def load_sheets(kind):
+def load(kind):
     sheets = {}
-    for name in ANNOTATORS:
-        path = DIR / f"{kind}s_{name}.csv"
-        if not path.exists():
-            continue
-        with path.open(encoding="utf-8", newline="") as stream:
-            sheets[name] = {row["item_id"]: row for row in csv.DictReader(stream)}
+    for name in LABELERS:
+        path = DIR / f"{kind}_{name}.csv"
+        if path.exists():
+            with path.open(encoding="utf-8", newline="") as stream:
+                sheets[name] = {row["item_id"]: row for row in csv.DictReader(stream)}
     return sheets
 
 
 def norm(value):
-    return value.strip().lower()
+    return value.strip().upper()
+
+
+def majority(values):
+    """The label at least two labelers chose, or None."""
+    counts = Counter(v for v in values if v)
+    if counts and counts.most_common(1)[0][1] >= 2:
+        return counts.most_common(1)[0][0]
+    return None
 
 
 def report(kind, fields, key):
-    sheets = load_sheets(kind)
+    sheets = load(kind)
     if not sheets:
         print(f"no {kind} sheets in {DIR}")
         return
@@ -75,8 +95,8 @@ def report(kind, fields, key):
 
     for field in fields:
         print()
-        print(f"{field}")
-        all_pairs = []
+        print(field)
+        pooled = []
         for left, right in combinations(sorted(sheets), 2):
             shared = set(sheets[left]) & set(sheets[right])
             pairs = [(norm(sheets[left][i][field]), norm(sheets[right][i][field]))
@@ -84,42 +104,43 @@ def report(kind, fields, key):
                      if norm(sheets[left][i][field]) and norm(sheets[right][i][field])]
             if not pairs:
                 continue
-            observed, kappa = cohens_kappa(pairs)
-            print(f"  {left} vs {right}: n={len(pairs):4d}  agreement {observed:.2f}  kappa {kappa:.2f}")
-            all_pairs += pairs
-        if all_pairs:
-            observed, kappa = cohens_kappa(all_pairs)
-            print(f"  pooled:     n={len(all_pairs):4d}  agreement {observed:.2f}  kappa {kappa:.2f}")
+            observed, k = kappa(pairs)
+            print(f"  {left} vs {right}: n={len(pairs):4d}  agreement {observed:.2f}  kappa {k:.2f}")
+            pooled += pairs
+        if pooled:
+            observed, k = kappa(pooled)
+            print(f"  pooled:              n={len(pooled):4d}  agreement {observed:.2f}  kappa {k:.2f}")
 
         counts = Counter(norm(row[field]) for rows in sheets.values()
                          for row in rows.values() if norm(row[field]))
         print(f"  labels used: {dict(sorted(counts.items()))}")
 
-    # manipulation check: did annotators recover the requested level
-    intended = {field: field.replace("_label", "") for field in fields
-                if field.endswith("_label")}
-    for field, column in intended.items():
+        column = RECOVERS.get(field)
+        if not column or not key:
+            continue
         matched = total = 0
         confusion = defaultdict(Counter)
-        for rows in sheets.values():
-            for item_id, row in rows.items():
-                want = key.get(item_id, {}).get(column, "").strip().lower()
-                got = norm(row[field])
-                if not want or not got:
-                    continue
-                total += 1
-                matched += want == got
-                confusion[want][got] += 1
+        for item_id in sorted(set().union(*(set(s) for s in sheets.values()))):
+            want = key.get(item_id, {}).get(column, "").strip().upper()
+            got = majority(norm(s[item_id][field]) for s in sheets.values()
+                           if item_id in s)
+            if not want or not got:
+                continue
+            total += 1
+            matched += want == got
+            confusion[want][got] += 1
         if total:
             print()
-            print(f"{column} recovery: {matched}/{total} = {100 * matched / total:.1f}%")
-            levels = sorted(confusion)
+            print(f"  {column} recovery (majority label): "
+                  f"{matched}/{total} = {100 * matched / total:.1f}%")
+            levels = sorted(set(confusion) | {g for c in confusion.values() for g in c})
             width = max(len(x) for x in levels) + 2
-            print("  intended".ljust(width + 2) + "".join(x.ljust(width) for x in levels))
+            print("    asked for".ljust(width + 4) + "".join(x.ljust(width) for x in levels))
             for want in levels:
-                row_total = sum(confusion[want].values())
-                cells = "".join(f"{confusion[want][got]}".ljust(width) for got in levels)
-                print(f"  {want.ljust(width)}  {cells} (n={row_total})")
+                if want not in confusion:
+                    continue
+                cells = "".join(str(confusion[want][got]).ljust(width) for got in levels)
+                print(f"    {want.ljust(width)}  {cells}")
 
 
 def main():
@@ -131,9 +152,9 @@ def main():
     else:
         print(f"no key at {key_path}, recovery cannot be computed")
 
-    report("rewrite", REWRITE_FIELDS, key)
+    report("rewrites", REWRITE_FIELDS, key)
     print()
-    report("pushback", PUSHBACK_FIELDS, key)
+    report("pushbacks", PUSHBACK_FIELDS, key)
 
 
 if __name__ == "__main__":

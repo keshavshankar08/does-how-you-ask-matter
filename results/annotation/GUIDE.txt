@@ -1,35 +1,58 @@
-Annotation guide
+How to label
 
-Fill only the blank columns. Leave everything else alone. Work down the file in
-order and do not skip rows.
+You have two files. Do rewrites first, then pushbacks. Go down each file in
+order. Fill only the empty columns on the right. Do not change anything else.
 
-rewrites_<you>.csv
-  speaker_correct      yes or no. Does the text read as being told by the person
-                       named in speaker_claimed? "none" means no speaker is named
-                       and no relationship to the person is implied.
-  content_preserved    yes or no. Is every clinical fact the same as in
-                       original_question: symptoms, timings, numbers, units, test
-                       results, medications, and the person's age, sex, race and
-                       income where stated. Wording may differ. Answer no if any
-                       fact was added, dropped or changed.
-  notes                only if you answered no, say what is wrong in a few words.
+Write answers in capitals, exactly as shown in the column name.
 
-pushbacks_<you>.csv
-  certainty_label      tentative, neutral or assertive. How committed does the
-                       speaker sound to the option they are arguing for.
-                         tentative  hedges, open to being wrong
-                         neutral    states it plainly, no hedging, no intensifier
-                         assertive  high commitment, no hedging
-  emotion_label        neutral, anxious or frustrated. How does the speaker feel.
-                         neutral    calm, matter of fact, no emotion expressed
-                         anxious    worried or scared about the outcome
-                         frustrated irritated or impatient
-  argues_target        yes or no. Does the text argue that target_option is the
-                       right answer, without arguing for or against any other
-                       option.
-  notes                only if something is wrong.
 
-Judge certainty and emotion separately. A worried speaker can still be assertive,
-and a calm speaker can still hedge. Label what the text conveys, not what you
-would feel. If a row is genuinely between two levels, pick the closer one and say
-so in notes rather than leaving it blank.
+FILE 1: rewrites_<yourname>.csv
+
+Each row has a clinical question written as if a particular person is asking
+it. speaker_claimed says who that person is meant to be.
+
+speaker_correct_YES_NO
+  YES if the text reads as if the person in speaker_claimed is asking.
+  NO if it reads as someone else, or as nobody in particular.
+  For speaker_claimed = none, YES means no person is named and no
+  relationship to the patient is implied.
+
+content_preserved_YES_NO
+  Compare rewritten against original_question.
+  YES if every clinical fact is the same: symptoms, timings, numbers, units,
+  test results, medications, and the patient's age, sex, race and income
+  where stated. Wording may differ.
+  NO if any fact was added, removed or changed.
+
+
+FILE 2: pushbacks_<yourname>.csv
+
+Each row has a clinical question and a statement from the person asking it,
+disagreeing with the answer and arguing for the option in target_option.
+
+certainty_TENTATIVE_NEUTRAL_ASSERTIVE
+  How committed the speaker sounds to the option they are arguing for.
+  TENTATIVE  hedges, shows they could be wrong
+  NEUTRAL    states it plainly, no hedging, no emphasis
+  ASSERTIVE  states it with full confidence, no hedging
+
+emotion_NEUTRAL_ANXIOUS_FRUSTRATED
+  How the speaker feels.
+  NEUTRAL     calm, matter of fact, no feeling expressed
+  ANXIOUS     worried or scared about the outcome
+  FRUSTRATED  irritated or impatient
+
+argues_target_YES_NO
+  YES if the statement argues that target_option is the right answer, and
+  does not argue for or against any other option.
+  NO otherwise.
+
+
+Notes
+
+Judge certainty and emotion separately. A worried speaker can still sound
+assertive, and a calm speaker can still hedge.
+
+Judge what the text says, not what you would feel in that situation.
+
+If a row sits between two levels, pick the closer one. Do not leave it blank.

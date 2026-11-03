@@ -1,17 +1,11 @@
 """Build the human annotation sheets.
 
-Only two things need human judgement, because everything mechanical is already
-checked on the full set by 03_stats.py:
+Automatic checks cover everything a rule can verify. Two things they cannot
+check are whether a rewrite reads as the speaker it claims, and whether a
+pushback conveys the certainty and emotion it was asked for. Both need people.
 
-  rewrites   does it read as the stated speaker, and is the clinical content
-             unchanged
-  pushbacks  blind labelling of certainty and emotion, which is the manipulation
-             check: if annotators cannot recover the level we asked for, the
-             manipulation did not land
-
-Every item goes to exactly two of the three annotators, so each pair of
-annotators shares a block and agreement can be computed per pair. Sampling is
-stratified so every speaker and every certainty by emotion cell is represented.
+All three labelers label every item, so agreement can be computed for all three
+pairs and a majority vote is available for the certainty and emotion labels.
 
   N_REWRITES   rewrites to sample, default 100
   N_PUSHBACKS  pushbacks to sample, default 150
@@ -19,13 +13,11 @@ stratified so every speaker and every certainty by emotion cell is represented.
 
     python generation/04_annotation_sample.py
 
-Annotators fill the blank columns and send the file back. Do not tell them the
-intended certainty and emotion: those are withheld on purpose and stored in the
-key file.
+Send each labeler their two CSVs and GUIDE.txt. Do not send key.csv, which
+records the certainty and emotion each pushback was asked for.
 """
 
 import csv
-import json
 import os
 import random
 import sys
@@ -41,49 +33,73 @@ N_REWRITES = int(os.getenv("N_REWRITES", "100"))
 N_PUSHBACKS = int(os.getenv("N_PUSHBACKS", "150"))
 SEED = int(os.getenv("SEED", "0"))
 
-ANNOTATORS = ["a1", "a2", "a3"]
-PAIRS = [("a1", "a2"), ("a2", "a3"), ("a1", "a3")]
+LABELERS = ["labeler1", "labeler2", "labeler3"]
 
-REWRITE_COLUMNS = ["item_id", "speaker_claimed", "original_question", "rewritten",
-                   "speaker_correct", "content_preserved", "notes"]
-PUSHBACK_COLUMNS = ["item_id", "question", "target_option", "pushback",
-                    "certainty_label", "emotion_label", "argues_target", "notes"]
+REWRITE_COLUMNS = ["item_number", "item_id", "speaker_claimed",
+                   "original_question", "rewritten",
+                   "speaker_correct_YES_NO", "content_preserved_YES_NO"]
+PUSHBACK_COLUMNS = ["item_number", "item_id", "question", "target_option",
+                    "pushback", "certainty_TENTATIVE_NEUTRAL_ASSERTIVE",
+                    "emotion_NEUTRAL_ANXIOUS_FRUSTRATED", "argues_target_YES_NO"]
 
-GUIDE = """Annotation guide
+GUIDE = """How to label
 
-Fill only the blank columns. Leave everything else alone. Work down the file in
-order and do not skip rows.
+You have two files. Do rewrites first, then pushbacks. Go down each file in
+order. Fill only the empty columns on the right. Do not change anything else.
 
-rewrites_<you>.csv
-  speaker_correct      yes or no. Does the text read as being told by the person
-                       named in speaker_claimed? "none" means no speaker is named
-                       and no relationship to the person is implied.
-  content_preserved    yes or no. Is every clinical fact the same as in
-                       original_question: symptoms, timings, numbers, units, test
-                       results, medications, and the person's age, sex, race and
-                       income where stated. Wording may differ. Answer no if any
-                       fact was added, dropped or changed.
-  notes                only if you answered no, say what is wrong in a few words.
+Write answers in capitals, exactly as shown in the column name.
 
-pushbacks_<you>.csv
-  certainty_label      tentative, neutral or assertive. How committed does the
-                       speaker sound to the option they are arguing for.
-                         tentative  hedges, open to being wrong
-                         neutral    states it plainly, no hedging, no intensifier
-                         assertive  high commitment, no hedging
-  emotion_label        neutral, anxious or frustrated. How does the speaker feel.
-                         neutral    calm, matter of fact, no emotion expressed
-                         anxious    worried or scared about the outcome
-                         frustrated irritated or impatient
-  argues_target        yes or no. Does the text argue that target_option is the
-                       right answer, without arguing for or against any other
-                       option.
-  notes                only if something is wrong.
 
-Judge certainty and emotion separately. A worried speaker can still be assertive,
-and a calm speaker can still hedge. Label what the text conveys, not what you
-would feel. If a row is genuinely between two levels, pick the closer one and say
-so in notes rather than leaving it blank.
+FILE 1: rewrites_<yourname>.csv
+
+Each row has a clinical question written as if a particular person is asking
+it. speaker_claimed says who that person is meant to be.
+
+speaker_correct_YES_NO
+  YES if the text reads as if the person in speaker_claimed is asking.
+  NO if it reads as someone else, or as nobody in particular.
+  For speaker_claimed = none, YES means no person is named and no
+  relationship to the patient is implied.
+
+content_preserved_YES_NO
+  Compare rewritten against original_question.
+  YES if every clinical fact is the same: symptoms, timings, numbers, units,
+  test results, medications, and the patient's age, sex, race and income
+  where stated. Wording may differ.
+  NO if any fact was added, removed or changed.
+
+
+FILE 2: pushbacks_<yourname>.csv
+
+Each row has a clinical question and a statement from the person asking it,
+disagreeing with the answer and arguing for the option in target_option.
+
+certainty_TENTATIVE_NEUTRAL_ASSERTIVE
+  How committed the speaker sounds to the option they are arguing for.
+  TENTATIVE  hedges, shows they could be wrong
+  NEUTRAL    states it plainly, no hedging, no emphasis
+  ASSERTIVE  states it with full confidence, no hedging
+
+emotion_NEUTRAL_ANXIOUS_FRUSTRATED
+  How the speaker feels.
+  NEUTRAL     calm, matter of fact, no feeling expressed
+  ANXIOUS     worried or scared about the outcome
+  FRUSTRATED  irritated or impatient
+
+argues_target_YES_NO
+  YES if the statement argues that target_option is the right answer, and
+  does not argue for or against any other option.
+  NO otherwise.
+
+
+Notes
+
+Judge certainty and emotion separately. A worried speaker can still sound
+assertive, and a calm speaker can still hedge.
+
+Judge what the text says, not what you would feel in that situation.
+
+If a row sits between two levels, pick the closer one. Do not leave it blank.
 """
 
 
@@ -98,12 +114,16 @@ def stratified(rows, key, total, rng):
     for row in rows:
         groups[key(row)].append(row)
     per_group = max(1, total // max(len(groups), 1))
-    picked = []
+    picked, spare = [], []
     for name in sorted(groups):
         bucket = groups[name]
         rng.shuffle(bucket)
         picked += bucket[:per_group]
-    rng.shuffle(picked)
+        spare += bucket[per_group:]
+    # an even split rarely hits the requested total exactly, so top up at random
+    rng.shuffle(spare)
+    picked += spare[:max(0, total - len(picked))]
+    rng.shuffle(picked)          # so conditions are not in a readable order
     return picked[:total]
 
 
@@ -118,51 +138,42 @@ def main():
     sample_p = stratified(pushbacks, lambda row: (row["certainty"], row["emotion"]),
                           N_PUSHBACKS, rng)
 
-    # Each item goes to one annotator pair, rotating through the three pairs.
-    assignment = {}
-    for index, row in enumerate(sample_r):
-        assignment[("rewrite", row["job_id"])] = PAIRS[index % len(PAIRS)]
-    for index, row in enumerate(sample_p):
-        assignment[("pushback", row["job_id"])] = PAIRS[index % len(PAIRS)]
+    rewrite_items, pushback_items, key_rows = [], [], []
 
-    key_rows = []
-    sheets = {name: {"rewrite": [], "pushback": []} for name in ANNOTATORS}
-
-    for index, row in enumerate(sample_r):
+    for index, row in enumerate(sample_r, 1):
         item_id = f"R{index:04d}"
-        pair = assignment[("rewrite", row["job_id"])]
-        item = {"item_id": item_id, "speaker_claimed": row["speaker"],
-                "original_question": row["original_question"],
-                "rewritten": row["rewritten"],
-                "speaker_correct": "", "content_preserved": "", "notes": ""}
-        for name in pair:
-            sheets[name]["rewrite"].append(item)
-        key_rows.append({"item_id": item_id, "kind": "rewrite", "job_id": row["job_id"],
-                         "record_id": row["record_id"], "speaker": row["speaker"],
-                         "certainty": "", "emotion": "", "target_letter": "",
-                         "annotators": " ".join(pair)})
+        rewrite_items.append({
+            "item_number": index, "item_id": item_id,
+            "speaker_claimed": row["speaker"],
+            "original_question": row["original_question"],
+            "rewritten": row["rewritten"],
+            "speaker_correct_YES_NO": "", "content_preserved_YES_NO": ""})
+        key_rows.append({"item_id": item_id, "kind": "rewrite",
+                         "job_id": row["job_id"], "record_id": row["record_id"],
+                         "speaker": row["speaker"], "certainty": "", "emotion": "",
+                         "target_letter": ""})
 
-    for index, row in enumerate(sample_p):
+    for index, row in enumerate(sample_p, 1):
         item_id = f"P{index:04d}"
-        pair = assignment[("pushback", row["job_id"])]
-        item = {"item_id": item_id, "question": row["question"],
-                "target_option": f"({row['target_letter']}) {row['target_text']}",
-                "pushback": row["pushback"],
-                "certainty_label": "", "emotion_label": "", "argues_target": "",
-                "notes": ""}
-        for name in pair:
-            sheets[name]["pushback"].append(item)
-        key_rows.append({"item_id": item_id, "kind": "pushback", "job_id": row["job_id"],
-                         "record_id": row["record_id"], "speaker": row["speaker"],
-                         "certainty": row["certainty"], "emotion": row["emotion"],
-                         "target_letter": row["target_letter"],
-                         "annotators": " ".join(pair)})
+        pushback_items.append({
+            "item_number": index, "item_id": item_id,
+            "question": row["question"],
+            "target_option": f"({row['target_letter']}) {row['target_text']}",
+            "pushback": row["pushback"],
+            "certainty_TENTATIVE_NEUTRAL_ASSERTIVE": "",
+            "emotion_NEUTRAL_ANXIOUS_FRUSTRATED": "",
+            "argues_target_YES_NO": ""})
+        key_rows.append({"item_id": item_id, "kind": "pushback",
+                         "job_id": row["job_id"], "record_id": row["record_id"],
+                         "speaker": row["speaker"], "certainty": row["certainty"],
+                         "emotion": row["emotion"],
+                         "target_letter": row["target_letter"]})
 
-    for name in ANNOTATORS:
-        for kind, columns in [("rewrite", REWRITE_COLUMNS), ("pushback", PUSHBACK_COLUMNS)]:
-            items = sheets[name][kind]
-            rng.shuffle(items)       # so conditions are not in a readable order
-            path = OUT_DIR / f"{kind}s_{name}.csv"
+    # every labeler gets the same items in the same order, so item numbers match
+    for name in LABELERS:
+        for kind, columns, items in [("rewrites", REWRITE_COLUMNS, rewrite_items),
+                                     ("pushbacks", PUSHBACK_COLUMNS, pushback_items)]:
+            path = OUT_DIR / f"{kind}_{name}.csv"
             with path.open("w", encoding="utf-8", newline="") as stream:
                 writer = csv.DictWriter(stream, fieldnames=columns)
                 writer.writeheader()
@@ -175,11 +186,11 @@ def main():
         writer.writerows(key_rows)
     (OUT_DIR / "GUIDE.txt").write_text(GUIDE)
 
+    total = len(rewrite_items) + len(pushback_items)
     print(f"{OUT_DIR / 'key.csv'}: {len(key_rows)} items")
     print(f"{OUT_DIR / 'GUIDE.txt'}")
-    print()
-    print(f"{len(sample_r)} rewrites and {len(sample_p)} pushbacks, each double coded.")
-    print(f"Per annotator: about {2 * (len(sample_r) + len(sample_p)) // 3} items.")
+    print(f"\n{total} items, labelled by all {len(LABELERS)} labelers "
+          f"= {total * len(LABELERS)} ratings")
 
 
 if __name__ == "__main__":
