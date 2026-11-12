@@ -45,6 +45,12 @@ def shard_tag():
     return f"s{index}of{total}"
 
 
+def model_tag(name=None):
+    """Short filesystem-safe name, e.g. Qwen/Qwen3-32B becomes qwen3-32b."""
+    name = name or os.getenv("MODEL", "model")
+    return name.split("/")[-1].lower().replace(".", "-")
+
+
 def my_rows(rows):
     """This process's share. Shards are disjoint, so every row is done once."""
     index, total = shard()
