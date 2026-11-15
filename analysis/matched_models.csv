@@ -1,0 +1,6 @@
+comparison,model_tag,trials,questions,to_target_n,target_adoption_pct
+Gemma 3 by size,gemma-3-4b-it,11745,315,9834,83.729246
+Gemma 3 by size,gemma-3-12b-it,11745,315,2727,23.218391
+Gemma 3 by size,gemma-3-27b-it,11745,315,1295,11.025968
+Gemma vs. MedGemma at 27B,gemma-3-27b-it,22640,536,3048,13.462898
+Gemma vs. MedGemma at 27B,medgemma-27b-text-it,22640,536,963,4.253534
